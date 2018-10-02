@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+<style>
+.parallax {
+    /* The image used */
+    background-image: url("back2.jpg");
+    padding: 0px;
+    /* Set a specific height */
+    height: 100vh;
+    max-height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.par1{
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  /* font-size: 50px; */
+  color: white;
+  transition: 20s;
+  padding: 5px;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+.par{
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  display: inline-block;
+  /* font-size: 50px; */
+  color: white;
+  transition: top 0.3s;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+.cont{
+  text-align: center;
+}
+.im{
+  top:90vh;
+  position: fixed;
+  width:30px;
+  height: auto;
+  left:90vw;
+  background: white;
+  z-index: 99;
+}
+.in{
+  top:80vh;
+  position: fixed;
+  width:30px;
+  height: auto;
+  left:90vw;
+  background: white;
+  z-index: 99;
+}
+.insert{
+  bottom:--10vh;
+  /* position: absolute; */
+  /* left:40vw; */
+  height: 100vh;
+}
+.lef{
+  background: #009900;
+  height: 100vh;
+  font-size: 10vh;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+</style>
+</head>
+<body class="parallax" style="max-height:100vh">
+  <img src="down.png" class="im"></img>
+  <img src="up.png" class="in"></img>
+
+    <p class="par1 col-lg-12 col-xs-12" style="font-size:40px; text-align: center;">LAXMAN VANAKALLA</p>
+    <div class="col-lg-12" style="padding:0px;">
+      <div class="col-lg-4 col-xs-4 lef"><p style="font-size:30px;font-style:italic;bottom:1000vh"> INTRO</p></div>
+      <div class="insert col-lg-5 col-xs-5"  ><p class="par1" style="font-size:7vh">Welcome to My Resume..!! Use down and up bottons to navigate</p> </div>
+      <div class="col-lg-3 col-xs-3"><</div>
+    </div>
+
+
+</body>
+<script type="text/javascript" >
+
+  var pos=0;
+  var b= new Array('<p>Contact</p>','<p>Skills</p>','<p>Acheivements</p>','Other Achievements','Thank You')
+  var a=   new Array( ' <div class="par1">'+
+    '  <p class="par" style="font-size:20px">E-mail id : laxmanvanakalla@gmail.com</p></br>'+
+    '  <p class="par" style="font-size:20px">Contact No. : 9705631126, 9490886803</p></br>'+
+      '<p class="par" style="font-size:20px">Branch : Computer Science and Engineering</p></br>'+
+    '  <p class="par" style="font-size:20px">Roll No. : 167165</p></br>'+
+    '  <p class="par" style="font-size:20px">Registration No. : 811628</p></br>'+
+    '  <p style="font-size:20px">Year Of Graduation : 2020</p></br> </div>  ', ' <div class="par1">'+
+      '  <p class="par" style="font-size:20px">Languages:  C++,Java(OOP)</p></br>'+
+      '  <p class="par" style="font-size:20px">Others :  Data Structures and algorithms, DBMS,SQL</p></br>'+
+        '<p class="par" style="font-size:20px">Web based : Html,CSS,JavaScript,Bootstrap,Reactjs</p></br>'+
+      '  <p class="par" style="font-size:20px">           Nodejs(Intermediate),Reactnative(Beginner)</p></br> </div> ',
+
+      ' <div class="par1">'+
+        '  <p class="par" style="font-size:20px">Secured All India Rank 2324 in Joint Entrance Examination conducted by CentralBoard Of Secondary Education</p></br>'+
+        '  <p class="par" style="font-size:20px">Secured state first in quiz competitions held on occasion of National Voters Day on25th jan 2014</p></br>'
+ + '</div>  ',
+
+ ' <div class="par1">'+
+   '  <p class="par" style="font-size:20px">Organised Career Guidance Program for govt.school children. </p></br>'+
+   '  <p class="par" style="font-size:20px">Event Manager for more than 20 events</p></br>'+
+     '<p class="par" style="font-size:20px">Visited 10 govt. schools & hostels to teach basics to mathematics & reasoning</p></br>'+
+   '  <p class="par" style="font-size:20px">Organised TZ IMPACT (science event) with 20 innovative exhibits by school children in Technozion ‘17.</p></br>'+
+   '  <p class="par" style="font-size:20px">Conducted pretty good number of quiz, elocution, essay writing, painting, singing,dancing competition for school children</p></br>'+ '</br> </div>  ',
+
+   ' <div class="par1">'+
+     '  <p class="par" style="font-size:20px">Awaiting for a positive response !! </p></br>'+
+     '</br> </div>  '
+    );
+
+      $(".im").on('click',function(){
+        $(".insert").css({bottom:"-1000vh"})
+        $(".insert").html(a[pos]);
+         $(".insert").animate({bottom:"-10vh"});
+         $(".lef").css({bottom:"-1000vh"})
+         $(".lef").html(b[pos]);
+          $(".lef").animate({bottom:"-10vh"});
+          if(pos<4)
+          pos=pos+1;
+      });
+      $(".in").on('click',function(){
+        $(".insert").css({bottom:"-1000vh"})
+        $(".insert").html(a[pos]);
+         $(".insert").animate({bottom:"-10vh"});
+         $(".lef").css({bottom:"-1000vh"})
+         $(".lef").html(b[pos]);
+          $(".lef").animate({bottom:"-10vh"});
+          if(pos>0)
+          pos=pos-1;
+      });
+
+        var CurrentScroll = 0;
+        $(window).on("scroll",function(event){
+
+            var NextScroll = $(this).scrollTop();
+
+            if (NextScroll > CurrentScroll){
+              $(".insert").css({bottom:"-1000vh"})
+              $(".insert").html(a[pos]);
+               $(".insert").animate({bottom:"-10vh"});
+               $(".lef").css({bottom:"-1000vh"})
+               $(".lef").html(b[pos]);
+                $(".lef").animate({bottom:"-10vh"});
+                if(pos<4)
+                pos=pos+1;
+            }
+            else {
+              $(".insert").css({bottom:"-1000vh"})
+              $(".insert").html(a[pos]);
+               $(".insert").animate({bottom:"-10vh"});
+               $(".lef").css({bottom:"-1000vh"})
+               $(".lef").html(b[pos]);
+                $(".lef").animate({bottom:"-10vh"});
+                if(pos>0)
+                pos=pos-1;
+            }
+
+            CurrentScroll = NextScroll;  //Updates current scroll position
+        });
+
+</script>
+  </html>
